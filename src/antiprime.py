@@ -33,9 +33,9 @@ def main() :
     ## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
     ## "anti-prime" or "not anti-prime"
     if es_antiprime:
-        return "anti-prime"
+        return ("anti-prime")
     else:
-        return "not anti-prime"
+        return ("not anti-prime")
 
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__" :
