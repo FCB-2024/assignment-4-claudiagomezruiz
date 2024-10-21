@@ -4,15 +4,31 @@
 def main() :
 	## YOU CODE SHOULD START HERE AST THE SAME
 	## IDENTATION AS THIS COMMENT
+ x = int(input("Enter a positive integer number: "))
+ i = 1
+ divisors_x = 0
 
+ while i <= x:
+	if x % i == 0:
+		divisors_x = divisors_x + 1
+	i = i + 1
 
-	## THE LAST LINES OF YOUR CODE SHOULD EITHER
-	## RETURN THE VALUE "anti-prime" or "not anti-prime"
-	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
-	## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
-	## "anti-prime" or "not anti-prime"
-	return("anti-prime")
+ menors < x
+ divisors_menors = 0
 
+ while menors < x:
+	if menors % i == 0:
+		divisors_menors = divisors_menors + 1
+	i = i + 1
+
+ anti_prime = divisors_x > divisors_menors
+
+ if divisors_x > divisors_menors:
+	res("anti-prime")
+ else:
+	res("not anti-prime")
+
+ return(res)
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__" :
 
