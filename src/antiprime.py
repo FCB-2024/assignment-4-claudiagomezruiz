@@ -6,33 +6,40 @@ def main():
     x = int(sys.argv[1])  #Agafa el primer argument passat com a número
     
     # Inicialitza variables
-    i = 1
-    divisors_x = 0
+    
 
+    def comptar_divisors(x):
+        i = 1
+        divisors_x = 0
     # Compta el nombre de divisors de x
-    while i <= x:
-        if x % i == 0:
-            divisors_x += 1
-        i += 1
+        while i <= x:
+            if x % i == 0:
+                divisors_x += 1
+            i += 1
+        return divisors_x #ensenya el nombre de divisors que té
 
-    # Inicialitza la variable per als números menors
-    menors = x - 1
-    divisors_menors = 0
 
-    # Compta els divisors del nombre més gran que és menor que x
-    i = 1  # Reinicialitza i
-    while i <= menors:
-        if menors % i == 0:
-            divisors_menors += 1
-        i += 1
+#Ara he comptat els divisors només de x, vull saber els divisors dels seus nombres inferiors:
+#Perquè ens guardi el número de divisors_x, com que s'elimina, creeem una nova variable que és divisors_x2 perquè ens el guardi i el compararem més tard.
 
-    # Determina si x és anti-prime
-    if divisors_x > divisors_menors:
-        result = "anti-prime"
+    divisors_x2 = comptar_divisors(x)
+
+ #fem una suposició:
+    
+    es_antiprime = True
+    comptador = 1
+    while comptador < x:
+        if comptar_divisors(x) >= divisors_x2:
+            es_antiprime = False
+            break
+        comptador += 1   
+
+    if es_antiprime:
+        return ("anti-prime")
     else:
-        result = "not anti-prime"
+        return ("not anti-prime")
 
-    return result
+   
 
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__":
