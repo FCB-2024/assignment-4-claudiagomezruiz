@@ -1,7 +1,10 @@
-def main():
-    # Llegeix un número enter positiu des de l'entrada
-    x = int(input("Enter a positive integer number: "))
+import sys
 
+def main():
+
+    #Si hi ha arguments passats per la línia de comandes
+    x = int(sys.argv[1])  #Agafa el primer argument passat com a número
+    
     # Inicialitza variables
     i = 1
     divisors_x = 0
