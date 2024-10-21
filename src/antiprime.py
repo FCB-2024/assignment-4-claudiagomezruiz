@@ -1,40 +1,37 @@
-## ADD WHATEVER ARGUMENTS ARE NECESSARY TO THE MAIN FUNCTION
-## IN THE SAME ORDER AS THE ARGUMENTS ARE TAKEN FROM THE
-## COMMAND LINE SPECIFIED BELOW
-def main() :
-	## YOU CODE SHOULD START HERE AST THE SAME
-	## IDENTATION AS THIS COMMENT
- x = int(input("Enter a positive integer number: "))
- i = 1
- divisors_x = 0
+def main():
+    # Llegeix un número enter positiu des de l'entrada
+    x = int(input("Enter a positive integer number: "))
 
- while i <= x:
-	if x % i == 0:
-		divisors_x = divisors_x + 1
-	i = i + 1
+    # Inicialitza variables
+    i = 1
+    divisors_x = 0
 
- menors < x
- divisors_menors = 0
+    # Compta el nombre de divisors de x
+    while i <= x:
+        if x % i == 0:
+            divisors_x += 1
+        i += 1
 
- while menors < x:
-	if menors % i == 0:
-		divisors_menors = divisors_menors + 1
-	i = i + 1
+    # Inicialitza la variable per als números menors
+    menors = x - 1
+    divisors_menors = 0
 
- anti_prime = divisors_x > divisors_menors
+    # Compta els divisors del nombre més gran que és menor que x
+    i = 1  # Reinicialitza i
+    while i <= menors:
+        if menors % i == 0:
+            divisors_menors += 1
+        i += 1
 
- if divisors_x > divisors_menors:
-	res("anti-prime")
- else:
-	res("not anti-prime")
+    # Determina si x és anti-prime
+    if divisors_x > divisors_menors:
+        result = "anti-prime"
+    else:
+        result = "not anti-prime"
 
- return(res)
+    return result
+
 ## DO NOT REMOVE THIS LINE BELOW
-if __name__ == "__main__" :
-
-	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
-	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
-	## $ python antiprime.py 6
-	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
-	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
-	print(main())
+if __name__ == "__main__":
+    # Crida la funció principal i imprimeix el resultat
+    print(main())
